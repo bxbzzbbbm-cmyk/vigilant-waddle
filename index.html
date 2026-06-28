@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>4-Digit PIN Generator</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 400px; margin: 2rem auto; text-align: center; }
+  button { padding: 0.5rem 1rem; font-size: 1.2rem; cursor: pointer; }
+  #pin { font-size: 2rem; margin-top: 1rem; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>4-Digit PIN Generator</h1>
+<button onclick="generatePin()">Generate PIN</button>
+<div id="pin"></div>
+
+<script>
+  function generatePin() {
+    const pin = Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('pin').textContent = pin;
+  }
+</script>
+
+</body>
+</html>
